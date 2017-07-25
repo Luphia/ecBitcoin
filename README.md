@@ -1,2 +1,2 @@
 # ecBitcoin
-An easy way to monitor bitcoin
+An easy way to monitor and receive bitcoin
