@@ -1,0 +1,53 @@
+{
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true,
+        "mocha": true
+    },
+    "extends": "airbnb-base",
+    "plugins": [
+        "import",
+        "mocha"
+    ],
+    "globals": {
+        "log": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "comma-dangle": ["error", "never"],
+        "no-underscore-dangle": [
+          "error", { 
+            "allowAfterThis": true, 
+            "allow": ["_id", "__"] 
+          }
+        ],
+        "no-bitwise": ["error", { "int32Hint": true }],
+        "indent": [
+            2,
+            4, {
+              "SwitchCase": 1
+            }
+        ],
+        "max-len": [
+            "error",
+            140,
+            4, {
+                "ignoreUrls": true,
+                "ignoreTemplateLiterals": true,
+                "ignoreRegExpLiterals": true
+            }
+        ],
+        "no-case-declarations": "error",
+        "no-else-return": "off",
+        "no-unneeded-ternary": "error",
+        "import/no-extraneous-dependencies": ["off", {"devDependencies": ["./test/ProgramTest.js", "./test/api/ProgramSpec.js"]}]
+    }
+}
